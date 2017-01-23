@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- 4
+- 5
+- 6
+before_script:
+- yarn run lint
+script:
+- yarn test
+cache:
+  yarn: true
+branches:
+  only:
+  - master
+  - develop
+  - /^feature\/.*$/
+  - /^hotfix\/.*$/
+  - /^release\/.*$/

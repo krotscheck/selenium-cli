@@ -1,0 +1,31 @@
+{
+  "name": "selenium-cli",
+  "version": "0.0.1",
+  "description": "A commandline client that allows you to launch, terminate, and introspect a selenium cluster.",
+  "repository": "https://github.com/krotscheck/selenium-cli.git",
+  "author": "Michael Krotscheck",
+  "license": "Apache-2.0",
+  "scripts": {
+    "lint": "tslint -p ./src",
+    "selenium": "node ./lib/cli.js",
+    "build": "tsc -p ./src; cp ./src/selenium-grid.docker.yml ./lib/; chmod +x ./lib/cli.js",
+    "prepublish": "yarn run build"
+  },
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.yml"
+  ],
+  "dependencies": {
+    "selenium-grid-status": "^0.2.0",
+    "yargs": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.27",
+    "@types/yargs": "^6.6.0",
+    "tslint": "^5.4.2",
+    "typescript": "^2.3.4"
+  },
+  "bin": {
+    "selenium": "./lib/cli.js"
+  }
+}

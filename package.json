@@ -1,6 +1,6 @@
 {
   "name": "selenium-cli",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A commandline client that allows you to launch, terminate, and introspect a selenium cluster.",
   "repository": "https://github.com/krotscheck/selenium-cli.git",
   "author": "Michael Krotscheck",
